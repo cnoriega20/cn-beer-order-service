@@ -1,9 +1,6 @@
 package tn.msvcs.cnbeerorderservice.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -13,7 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.Set;
 
-@Data
+@Setter
+@Getter
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
@@ -21,6 +19,8 @@ import java.util.Set;
 public class BeerOrder extends BaseEntity {
 
     private String customerRef;
+
+
 
     @ManyToOne
     private Customer customer;

@@ -1,7 +1,9 @@
 package tn.msvcs.cnbeerorderservice.domain;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
@@ -11,7 +13,9 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-@Data
+@Setter
+@Getter
+@AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
 public class BaseEntity {
