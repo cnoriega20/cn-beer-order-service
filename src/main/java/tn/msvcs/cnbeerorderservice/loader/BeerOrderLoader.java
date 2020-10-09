@@ -1,6 +1,7 @@
 package tn.msvcs.cnbeerorderservice.loader;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import tn.msvcs.cnbeerorderservice.domain.Customer;
@@ -10,6 +11,7 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Component
+@Slf4j
 public class BeerOrderLoader implements CommandLineRunner {
     public static final String TASTING_ROOM = "Tasting Room";
     public static final String BEER_1_UPC = "0631234200036";
@@ -29,6 +31,7 @@ public class BeerOrderLoader implements CommandLineRunner {
                     .customerName(TASTING_ROOM)
                     .apikey(UUID.randomUUID())
                     .build());
+            log.debug("Loaded beer " + customerRepository.findAllByCustomerNameLike(TASTING_ROOM).toString());
         }
     }
 }
