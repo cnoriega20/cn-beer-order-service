@@ -2,16 +2,18 @@ package tn.msvcs.cnbeerorderservice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import java.util.UUID;
 
-@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 public class BeerOrderOnline extends BaseEntity {
 
     @ManyToOne
