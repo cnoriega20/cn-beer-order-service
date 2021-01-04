@@ -21,6 +21,8 @@ public class BeerOrderOnline extends BaseEntity {
 
     private UUID beerId;
 
+    private String upc;
+
     private Integer orderQuantity = 0;
 
     private Integer quantityAllocated = 0;
